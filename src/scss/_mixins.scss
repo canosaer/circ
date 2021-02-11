@@ -34,3 +34,14 @@
   width: 1.25rem;
 	height: 1.25rem;
 }
+
+@mixin arrow-line {
+  filter: brightness(60%);
+  transition: width 200ms ease-out;
+  width: 0rem;
+}
+
+@mixin expanded-arrow{
+  width: 2.125rem;
+	border: 1px solid white;
+}

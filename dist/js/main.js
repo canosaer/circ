@@ -1,4 +1,2 @@
-"use strict";
-
-console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
+const leftArrowBox=document.querySelector(".left-arrow"),rightArrowBox=document.querySelector(".right-arrow"),leftArrowLine=document.querySelector(".left-arrow__line"),rightArrowLine=document.querySelector(".right-arrow__line");class ArrowExpander{box=null;line=null;constructor(r,e){this.box=r,this.line=e,this.setup()}setup(){this.startHover=r=>{this.box.classList.contains("left-arrow")?this.line.classList.add("left-arrow__line_expanded"):this.line.classList.add("right-arrow__line_expanded")},this.endHover=r=>{this.box.classList.contains("left-arrow")?this.line.classList.remove("left-arrow__line_expanded"):this.line.classList.remove("right-arrow__line_expanded")},this.box.addEventListener("mouseover",this.startHover),this.box.addEventListener("mouseout",this.endHover)}}const leftArrowExpand=new ArrowExpander(leftArrowBox,leftArrowLine),rightArrowExpand=new ArrowExpander(rightArrowBox,rightArrowLine);
 //# sourceMappingURL=main.js.map
