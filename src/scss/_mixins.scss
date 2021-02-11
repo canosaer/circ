@@ -6,8 +6,26 @@
     }
   }
   
-  @mixin desktop {
-    @media (min-width: variables.$desktop-width) {
-      @content;
-    }
+@mixin desktop {
+  @media (min-width: variables.$desktop-width) {
+    @content;
   }
+}
+
+@mixin arrow {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: black;
+  cursor: pointer;
+}
+
+@mixin arrow-head {
+  width: 0.875rem;
+  height: 0.875rem;
+  filter: brightness(70%);
+  transform: rotate(45deg);
+}
