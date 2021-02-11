@@ -29,3 +29,8 @@
   filter: brightness(70%);
   transform: rotate(45deg);
 }
+
+@mixin desktop-arrow-head{
+  width: 1.25rem;
+	height: 1.25rem;
+}
