@@ -45,3 +45,9 @@
   width: 2.125rem;
 	border: 1px solid white;
 }
+
+@mixin close-line{
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: rotate(45deg);
+}

@@ -206,6 +206,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .intro__heading {
+    margin: unset;
     width: unset;
     padding: 0rem 15% 0rem 0rem;
     font-size: 1.5rem;
@@ -239,17 +240,65 @@ a {
 
 .menu-box {
   display: none;
+  height: 0rem;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
 }
 @media screen and (min-width: 768px) {
   .menu-box {
     display: flex;
+    height: unset;
+    position: relative;
   }
+}
+.menu-box_open {
+  display: flex;
+  height: 7rem;
+  background: white;
+  width: 100%;
+  align-items: center;
+  padding: 0 1.125rem;
+}
+.menu-box__close {
+  display: flex;
+  width: 2rem;
+  height: 1rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-box__close {
+    display: none;
+  }
+}
+.menu-box__close-left {
+  width: 0.75rem;
+  height: 0.75rem;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  border-right: 2px #979797 solid;
+  border-top: 2px #979797 solid;
+}
+.menu-box__close-right {
+  width: 0.75rem;
+  height: 0.75rem;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  margin-left: 2px;
+  border-left: 2px #979797 solid;
+  border-bottom: 2px #979797 solid;
+}
+.menu-box__list {
+  font-weight: bold;
+  display: flex;
+  font-size: 0.75rem;
+  width: 100%;
+  justify-content: space-evenly;
 }
 @media screen and (min-width: 768px) {
   .menu-box__list {
-    display: flex;
+    font-weight: unset;
     color: white;
-    font-size: 0.75rem;
     width: 17rem;
     justify-content: space-between;
   }

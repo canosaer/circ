@@ -76,6 +76,7 @@ a {
 		transition: color 200ms ease-out;
 
 		@include mixins.tablet {
+			margin: unset;
 			width: unset;
 			padding: 0rem 15% 0rem 0rem;
 			font-size: 1.5rem;
@@ -111,16 +112,60 @@ a {
 
 .menu-box{
 	display: none;
+	height: 0rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
 
 	@include mixins.tablet {
 		display: flex;
+		height: unset;
+		position: relative;
+	}
+
+	&_open{
+		display: flex;
+		height: 7rem;
+		background: white;
+		width: 100%;
+		align-items: center;
+		padding: 0 1.125rem;
+	}
+
+	&__close{
+		display: flex;
+		width: 2rem;
+		height: 1rem;
+		cursor: pointer;
+
+		@include mixins.tablet {
+			display: none;
+		}
+	}
+
+	&__close-left{
+		@include mixins.close-line;
+		border-right: 2px #979797 solid;
+		border-top: 2px #979797 solid;
+	}
+
+	&__close-right{
+		@include mixins.close-line;
+		margin-left: 2px;
+		border-left: 2px #979797 solid;
+		border-bottom: 2px #979797 solid;
 	}
 
 	&__list{
+		font-weight: bold;
+		display: flex;
+		font-size: 0.75rem;
+		width: 100%;
+		justify-content: space-evenly;
+
 		@include mixins.tablet {
-			display: flex;
+			font-weight: unset;
 			color: white;
-			font-size: 0.75rem;
 			width: 17rem;
 			justify-content: space-between;
 		}

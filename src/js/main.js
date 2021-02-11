@@ -2,6 +2,9 @@ const leftArrowBox = document.querySelector(`.left-arrow`)
 const rightArrowBox = document.querySelector(`.right-arrow`)
 const leftArrowLine = document.querySelector(`.left-arrow__line`)
 const rightArrowLine = document.querySelector(`.right-arrow__line`)
+const toggleButton = document.querySelector(`.toggle`)
+const closeButton = document.querySelector(`.menu-box__close`)
+const menuBox = document.querySelector(`.menu-box`)
 
 class ArrowExpander{
  
@@ -41,5 +44,49 @@ class ArrowExpander{
     }
 }
 
+class MenuOpener{
+ 
+    button = null
+    box = null
+    
+    constructor(button, box){
+        this.button = button
+        this.box = box
+        this.setup()
+    }
+
+    setup() {
+    
+        this.clickHandler = (evt) => {
+            this.box.classList.add(`menu-box_open`)
+        }
+
+        this.button.addEventListener(`click`, this.clickHandler)    
+    }
+}
+
+class MenuCloser{
+ 
+    button = null
+    box = null
+    
+    constructor(button, box){
+        this.button = button
+        this.box = box
+        this.setup()
+    }
+
+    setup() {
+    
+        this.clickHandler = (evt) => {
+            this.box.classList.remove(`menu-box_open`)
+        }
+
+        this.button.addEventListener(`click`, this.clickHandler)    
+    }
+}
+
 const leftArrowExpand = new ArrowExpander(leftArrowBox, leftArrowLine)
 const rightArrowExpand = new ArrowExpander(rightArrowBox, rightArrowLine)
+const openMenu = new MenuOpener(toggleButton, menuBox)
+const closeMenu = new MenuCloser(closeButton, menuBox)
